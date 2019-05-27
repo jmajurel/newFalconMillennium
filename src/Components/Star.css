@@ -1,0 +1,9 @@
+.Star {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 5px;
+  box-shadow: 0.3px 0.3px 2px 2px #989898;
+}

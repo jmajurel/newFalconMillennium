@@ -1,0 +1,21 @@
+.Home {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+}
+
+.app-welcome {
+  color: black;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35vh;
+  opacity: 1;
+}
+
+.app-title {
+  padding-top: 5%;
+}

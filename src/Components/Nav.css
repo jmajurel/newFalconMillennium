@@ -1,0 +1,26 @@
+.navbar {
+  margin-bottom: 5px;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  padding: none;
+  /*transition: transform 0.5s ease-out;*/
+}
+
+.navbar-brand img:hover {
+  animation: shaking 0.6s ease-in 0.01s 1 running;
+}
+
+@keyframes shaking {
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}

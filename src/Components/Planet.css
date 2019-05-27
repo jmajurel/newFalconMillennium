@@ -1,0 +1,8 @@
+.Planet.card {
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+.bg-planet-gas {
+  background-color: beige;
+}
