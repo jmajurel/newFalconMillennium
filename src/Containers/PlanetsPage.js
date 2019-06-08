@@ -10,7 +10,7 @@ class PlanetsPage extends Component {
   render() {
     const { planets } = this.props;
     return (
-      <div className="Planets">
+      <div className="Planets" style={{marginTop: 80}}>
         <PlanetsList planets={planets} />
       </div>
     );

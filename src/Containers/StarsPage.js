@@ -13,12 +13,13 @@ const StarsPage = ({ stars, fetchStars }) => {
 
   const handleStarHover = (e, starId) => {
     e.preventDefault();
+    console.log(starId);
     const star = stars.find(({ _id }) => _id === starId); //linear search can be improve with hasmap on ids
     setSelectedStar(star);
   };
 
   return (
-    <div className="StarsPage">
+    <div className="StarsPage" style={{marginTop: 80}}>
       <Tooltip selectedStar={selectedStar} />
       <StarsList handleStarHover={handleStarHover} stars={stars} />
     </div>

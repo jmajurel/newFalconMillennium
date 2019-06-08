@@ -1,9 +1,9 @@
 import React from "react";
 import "./Tooltip.css";
 
-const Tooltip = ({ name }) => (
+const Tooltip = ({ _id: id, name }) => (
   <div className="Tooltip">
-    <h5>Name: {name}</h5>
+    <h5>Name: {id}</h5>
   </div>
 );
 

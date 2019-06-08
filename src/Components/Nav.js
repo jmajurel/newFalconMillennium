@@ -4,7 +4,7 @@ import "./Nav.css";
 import Icon from "../Illustrations/icon.png";
 
 const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <Link className="navbar-brand" to="/">
       <img src={Icon} alt="Falcon" />
     </Link>
