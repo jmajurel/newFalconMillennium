@@ -2,11 +2,9 @@ import React from "react";
 import "./Star.css";
 
 const Star = ({ _id: id, name, color, handleStarHover }) => (
-  <div
-    className="Star"
+  <div className="Star"
     onClick={e => handleStarHover(e, id)}
-    style={{ backgroundColor: `#${Number(color).toString(16)}` }}
-  >
+    style={{ backgroundColor: `#${Number(color).toString(16)}` }}>
     {name}
   </div>
 );
