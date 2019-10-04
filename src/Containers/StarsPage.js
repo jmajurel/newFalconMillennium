@@ -6,7 +6,7 @@ import Tooltip from "../Components/Tooltip";
 import Buffer from "../Components/Buffer";
 import Paginator from "../Components/Paginator";
 
-const StarsPage = ({ stars, fetchStars }) => {
+const StarsPage = ({ stars, fetchStars, currentPage, pageCount }) => {
 
   const [selectedStar, setSelectedStar] = useState({});
   const [loading, setLoading] = useState(false);
@@ -22,19 +22,26 @@ const StarsPage = ({ stars, fetchStars }) => {
     setSelectedStar(star);
   };
 
+  const handleGetPage = (e, pageIdx) => {
+    e.preventDefault();
+    fetchStars(pageIdx);
+  }
+
   return (
     <div className="StarsPage" style={{marginTop: 80}}>
       { loading ? <Buffer /> : null }
       {selectedStar ? <Tooltip selectedStar={selectedStar} />: null}
       <StarsList handleStarHover={handleStarHover} stars={stars} />
-      <Paginator pageNumber={stars.length} />
+      <Paginator pageNumber={stars.length} pageCount={pageCount} activePage={currentPage} onGetStars={handleGetPage}/>
     </div>
   );
 };
 
 function mapStateToProps(state) {
   return {
-    stars: state.stars.stars
+    stars: state.stars.stars,
+    currentPage: state.stars.currentPage,
+    pageCount: state.stars.pageCount
   };
 }
 

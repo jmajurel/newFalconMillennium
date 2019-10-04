@@ -6,4 +6,6 @@
   text-align: center;
   margin: 5px;
   box-shadow: 0.3px 0.3px 2px 2px #989898;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
