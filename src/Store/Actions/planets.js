@@ -2,7 +2,7 @@ import { GET_PLANETS } from "../actionTypes";
 import { apiCall } from "../../Services/apiCall";
 import { addError } from "./errors";
 
-const API_URL = "https://space-api-millennium.herokuapp.com";
+const API_URL = "http://localhost:8080";
 
 //Action creators
 const getPlanets = planets => ({
