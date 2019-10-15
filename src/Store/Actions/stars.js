@@ -5,7 +5,7 @@ import { addError } from "./errors";
 //const API_URL = "https://space-api-millennium.herokuapp.com";
 const API_URL = "http://localhost:8080";
 
-const getStars = ({currentPage, pageCount, stars}) => ({
+const getStars = ({ currentPage, pageCount, stars }) => ({
   type: GET_STARS,
   stars,
   currentPage,
