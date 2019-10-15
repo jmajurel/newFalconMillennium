@@ -13,7 +13,7 @@ const Paginator = ({ pageCount, activePage, onGetStars }) => (
           <a
             href="#"
             className="page-link"
-            onClick={e => onGetStars(e, activePage - 1)}
+            onClick={e => onGetStars(e, activePage)}
           >
             {activePage - 1}
           </a>
@@ -29,7 +29,7 @@ const Paginator = ({ pageCount, activePage, onGetStars }) => (
           <a
             href="#"
             className="page-link"
-            onClick={e => onGetStars(e, activePage + 1)}
+            onClick={e => onGetStars(e, activePage)}
           >
             {activePage + 1}
           </a>

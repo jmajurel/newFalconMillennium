@@ -2,7 +2,7 @@ import fetch from "cross-fetch";
 
 export function apiCall(url, method, data) {
   return new Promise((resolve, reject) => {
-    fetch(url + `?range=${data.range}`)
+    fetch(url + `?range=${data}`)
       .then(response => {
         if (response.status > 202) {
           return reject({ error: response.statusText });
