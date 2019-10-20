@@ -24,9 +24,8 @@ const StarsPage = ({ stars, fetchStars, currentPage, pageCount }) => {
 
   const handleGetPage = (e, pageIdx) => {
     e.preventDefault();
-
-    const newUpperLimit = pageIdx * stars.length;
-    const newLowerLimit = newUpperLimit - stars.length;
+    let newLowerLimit = pageIdx * 60;
+    let newUpperLimit = newLowerLimit + 60;
     fetchStars({ range: `${newLowerLimit}-${newUpperLimit}` });
   };
 
