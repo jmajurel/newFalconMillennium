@@ -7,8 +7,8 @@
 }
 
 .app-welcome {
-  color: black;
-  letter-spacing: 2px;
+  color: goldenrod;
+  letter-spacing: 8px;
   position: absolute;
   left: 0;
   right: 0;
@@ -17,5 +17,16 @@
 }
 
 .app-title {
-  padding-top: 5%;
+  font-size: 8em;
+}
+.app-button {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: underline;
+  color: inherit;
+  transition: 0.2s ease-in color 0s;
+}
+
+.app-button:hover {
+  color: white;
 }
