@@ -1,4 +1,5 @@
 import React from "react";
+import "./Paginator.css";
 
 const Paginator = ({ pageCount, activePage, onGetStars }) => (
   <nav aria-label="Page navigation example">
@@ -13,7 +14,7 @@ const Paginator = ({ pageCount, activePage, onGetStars }) => (
           <a
             href="#"
             className="page-link"
-            onClick={e => onGetStars(e, activePage - 1)}
+            onClick={e => onGetStars(e, activePage - 2)}
           >
             {activePage - 1}
           </a>
@@ -29,7 +30,7 @@ const Paginator = ({ pageCount, activePage, onGetStars }) => (
           <a
             href="#"
             className="page-link"
-            onClick={e => onGetStars(e, activePage + 1)}
+            onClick={e => onGetStars(e, activePage + 2)}
           >
             {activePage + 1}
           </a>

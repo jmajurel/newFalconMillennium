@@ -5,30 +5,27 @@ import PlanetsList from "../Components/PlanetsList";
 import Buffer from "../Components/Buffer";
 
 class PlanetsPage extends Component {
-
   constructor(props) {
     super(props);
-    this.state = { loading: false }
+    this.state = { loading: false };
   }
 
   componentDidMount() {
-    this.setState({loading: true});
-    this.props.fetchPlanets()
-    .then(() => this.setState({loading: false}));
+    this.setState({ loading: true });
+    this.props.fetchPlanets().then(() => this.setState({ loading: false }));
   }
 
   render() {
     const { planets } = this.props;
     return (
       <div>
-        <div className="Planets" style={{marginTop: 80}}>
-          { this.state.loading ? <Buffer /> : null }
+        <div className="Planets" style={{ marginTop: 80 }}>
+          {this.state.loading ? <Buffer /> : null}
           <PlanetsList planets={planets} />
         </div>
       </div>
     );
   }
-  
 }
 
 const mapStateToProps = state => {

@@ -5,6 +5,7 @@ import StarsList from "../Components/StarsList";
 import Tooltip from "../Components/Tooltip";
 import Buffer from "../Components/Buffer";
 import Paginator from "../Components/Paginator";
+import Legend from "../Components/Legend";
 
 const StarsPage = ({ stars, fetchStars, currentPage, pageCount }) => {
   const [selectedStar, setSelectedStar] = useState({});
@@ -17,13 +18,16 @@ const StarsPage = ({ stars, fetchStars, currentPage, pageCount }) => {
 
   const handleStarHover = (e, starId) => {
     e.preventDefault();
-    const star = stars.find(({ _id }) => _id === starId); //linear search can be improve with hasmap on ids
+    const star = stars.find(({ _id }) => _id === starId); //linear search can be improve with hashmap on ids
     setSelectedStar(star);
   };
 
   const handleGetPage = (e, pageIdx) => {
     e.preventDefault();
-    fetchStars(pageIdx);
+
+    const newUpperLimit = pageIdx * stars.length;
+    const newLowerLimit = newUpperLimit - stars.length;
+    fetchStars({ range: `${newLowerLimit}-${newUpperLimit}` });
   };
 
   return (
@@ -37,6 +41,7 @@ const StarsPage = ({ stars, fetchStars, currentPage, pageCount }) => {
         activePage={currentPage}
         onGetStars={handleGetPage}
       />
+      <Legend text="Note, the color represents the temperature of the star, from white to black"></Legend>
     </div>
   );
 };

@@ -36,11 +36,6 @@ const Nav = () => (
             Stars
           </Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/galaxy">
-            Galaxy
-          </Link>
-        </li>
       </ul>
     </div>
   </nav>

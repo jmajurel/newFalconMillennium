@@ -1,6 +1,10 @@
 .Planet.card {
   text-transform: capitalize;
   padding: 5px;
+  transition: 0.2s ease-in background-color 0s;
+}
+.Planet.card:hover {
+  background-color: lightgrey;
 }
 
 .bg-planet-gas {

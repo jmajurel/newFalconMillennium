@@ -1,0 +1,7 @@
+.legend {
+  list-style-type: none;
+  text-align: left;
+  font-style: italic;
+  padding: 5px;
+  width: fit-content;
+}
