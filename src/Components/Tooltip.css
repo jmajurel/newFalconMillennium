@@ -1,7 +1,15 @@
 .Tooltip {
-  display: none;
   position: absolute;
-  width: 200px;
-  height: 200px;
+  z-index: 1;
+  width: fit-content;
+  height: fit-content;
   margin: 10px;
+  border: red 2px solid;
+  text-align: left;
+  color: black;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: wheat;
+  pointer-events: none;
 }
